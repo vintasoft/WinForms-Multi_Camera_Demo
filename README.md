@@ -8,7 +8,7 @@ This C# project uses <a href="https://www.vintasoft.com/vsimaging-dotnet-index.h
 
 
 ## Screenshot
-<img src="vintasoft-multi-camera-demo.png" alt="VintaSoft Multi Camera Demo">
+<img src="vintasoft-multi-camera-demo.png" title="VintaSoft Multi Camera Demo">
 
 
 ## Usage
