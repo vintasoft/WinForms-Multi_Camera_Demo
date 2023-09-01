@@ -337,6 +337,37 @@ namespace DemosCommonCode
         }
 
         /// <summary>
+        /// Auto fit toolstrip buttons. 
+        /// </summary>
+        /// <param name="toolStrip">Toolstrip.</param>
+        public static void AutoFitToolstripButtons(ToolStrip toolStrip)
+        {
+            // for each item in toolstrip
+            foreach(ToolStripItem item in toolStrip.Items)
+            {
+                // if item is button
+                if (item is ToolStripButton || item is ToolStripSplitButton)
+                {
+                    using (System.Drawing.Graphics g = System.Drawing.Graphics.FromHwnd(toolStrip.Handle))
+                    {
+                        // get size of button text
+                        System.Drawing.SizeF textSize = g.MeasureString(item.Text, item.Font);
+                        // button has dropdown button
+                        if (item is ToolStripSplitButton)
+                        {
+                            // add dropdown button width to the width of button text
+                            textSize.Width += ((ToolStripSplitButton)item).DropDownButtonWidth;
+                        }
+                        // if button width is less than width of button text
+                        if (item.Width < textSize.Width)
+                            // increase the button width
+                            item.Width = (int)textSize.Width;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
         /// Handles the VisualToolException event of the ImageViewer control.
         /// </summary>
         private static void imageViewer_VisualToolException(object sender, ExceptionEventArgs e)
