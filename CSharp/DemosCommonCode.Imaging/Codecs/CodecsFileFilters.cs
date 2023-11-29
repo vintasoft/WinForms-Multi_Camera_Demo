@@ -166,6 +166,24 @@ namespace DemosCommonCode.Imaging.Codecs
         const string XLS_FILE_DIALOG_FILTER = "XLS files|" + XLS_FILE_EXTENSIONS;
 
         /// <summary>
+        /// The TSV file extensions.
+        /// </summary>
+        const string TSV_FILE_EXTENSIONS = "*.tsv;*.tab";
+        /// <summary>
+        /// The file filter for TSV files.
+        /// </summary>
+        const string TSV_FILE_DIALOG_FILTER = "TSV files|" + TSV_FILE_EXTENSIONS;
+
+        /// <summary>
+        /// The CSV file extensions.
+        /// </summary>
+        const string CSV_FILE_EXTENSIONS = "*.csv";
+        /// <summary>
+        /// The file filter for CSV files.
+        /// </summary>
+        const string CSV_FILE_DIALOG_FILTER = "CSV files|" + CSV_FILE_EXTENSIONS;
+
+        /// <summary>
         /// The SVG file extensions.
         /// </summary>
         const string SVG_FILE_EXTENSIONS = "*.svg";
@@ -469,6 +487,14 @@ namespace DemosCommonCode.Imaging.Codecs
 
                 filter1 += "|" + XLS_FILE_DIALOG_FILTER;
                 filter2 += XLS_FILE_EXTENSIONS + ";";
+                _imageDecoderFilterDefaultIndex++;
+
+                filter1 += "|" + TSV_FILE_DIALOG_FILTER;
+                filter2 += TSV_FILE_EXTENSIONS + ";";
+                _imageDecoderFilterDefaultIndex++;
+
+                filter1 += "|" + CSV_FILE_DIALOG_FILTER;
+                filter2 += CSV_FILE_EXTENSIONS + ";";
                 _imageDecoderFilterDefaultIndex++;
             }
 
