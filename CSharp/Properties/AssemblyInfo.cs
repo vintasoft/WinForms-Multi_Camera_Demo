@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("VintaSoft Ltd.")]
 [assembly: AssemblyProduct("VintaSoft Imaging .NET SDK")]
-[assembly: AssemblyCopyright("Copyright VintaSoft Ltd. 2023")]
+[assembly: AssemblyCopyright("Copyright VintaSoft Ltd. 2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("12.3.2.1")]
-[assembly: AssemblyFileVersion("12.3.2.1")]
+[assembly: AssemblyVersion("12.3.3.1")]
+[assembly: AssemblyFileVersion("12.3.3.1")]
