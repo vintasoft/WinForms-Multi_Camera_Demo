@@ -132,7 +132,7 @@ namespace MultiCameraDemo
         #region 'File' menu
 
         /// <summary>
-        /// Handles the Click event of ExitToolStripMenuItem object.
+        /// Handles the Click event of exitToolStripMenuItem object.
         /// </summary>
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -145,7 +145,7 @@ namespace MultiCameraDemo
         #region 'View' menu
 
         /// <summary>
-        /// Handles the Click event of RotateClockwiseToolStripMenuItem object.
+        /// Handles the Click event of rotateClockwiseToolStripMenuItem object.
         /// </summary>
         private void rotateClockwiseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -153,7 +153,7 @@ namespace MultiCameraDemo
         }
 
         /// <summary>
-        /// Handles the Click event of RotateCounterclockwiseToolStripMenuItem object.
+        /// Handles the Click event of rotateCounterclockwiseToolStripMenuItem object.
         /// </summary>
         private void rotateCounterclockwiseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -166,7 +166,7 @@ namespace MultiCameraDemo
         #region 'Webcam' menu
 
         /// <summary>
-        /// Handles the Click event of StartAllToolStripMenuItem object.
+        /// Handles the Click event of startAllToolStripMenuItem object.
         /// </summary>
         private void startAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -175,7 +175,7 @@ namespace MultiCameraDemo
         }
 
         /// <summary>
-        /// Handles the Click event of StopAllToolStripMenuItem object.
+        /// Handles the Click event of stopAllToolStripMenuItem object.
         /// </summary>
         private void stopAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -184,7 +184,7 @@ namespace MultiCameraDemo
         }
 
         /// <summary>
-        /// Handles the Click event of MasterViewerToolStripMenuItem object.
+        /// Handles the Click event of masterViewerToolStripMenuItem object.
         /// </summary>
         private void masterViewerToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -193,7 +193,7 @@ namespace MultiCameraDemo
         }
 
         /// <summary>
-        /// Handles the Click event of Viewer1ToolStripMenuItem object.
+        /// Handles the Click event of viewer1ToolStripMenuItem object.
         /// </summary>
         private void viewer1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -202,7 +202,7 @@ namespace MultiCameraDemo
         }
 
         /// <summary>
-        /// Handles the Click event of Viewer2ToolStripMenuItem object.
+        /// Handles the Click event of viewer2ToolStripMenuItem object.
         /// </summary>
         private void viewer2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -211,7 +211,7 @@ namespace MultiCameraDemo
         }
 
         /// <summary>
-        /// Handles the Click event of Viewer3ToolStripMenuItem object.
+        /// Handles the Click event of viewer3ToolStripMenuItem object.
         /// </summary>
         private void viewer3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -220,7 +220,7 @@ namespace MultiCameraDemo
         }
 
         /// <summary>
-        /// Handles the Click event of Viewer4ToolStripMenuItem object.
+        /// Handles the Click event of viewer4ToolStripMenuItem object.
         /// </summary>
         private void viewer4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -234,7 +234,7 @@ namespace MultiCameraDemo
         #region 'Help' menu
 
         /// <summary>
-        /// Handles the Click event of AboutToolStripMenuItem object.
+        /// Handles the Click event of aboutToolStripMenuItem object.
         /// </summary>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -284,7 +284,7 @@ namespace MultiCameraDemo
         #region Webcam Context menu
 
         /// <summary>
-        /// Handles the Click event of SelectDeviceToolStripMenuItem object.
+        /// Handles the Click event of selectDeviceToolStripMenuItem object.
         /// </summary>
         private void selectDeviceToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -294,7 +294,7 @@ namespace MultiCameraDemo
         }
 
         /// <summary>
-        /// Handles the Click event of CaptureAndSaveImageToolStripMenuItem object.
+        /// Handles the Click event of captureAndSaveImageToolStripMenuItem object.
         /// </summary>
         private void captureAndSaveImageToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -313,7 +313,7 @@ namespace MultiCameraDemo
         }
 
         /// <summary>
-        /// Handles the Click event of StartToolStripMenuItem object.
+        /// Handles the Click event of startToolStripMenuItem object.
         /// </summary>
         private void startToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -330,7 +330,7 @@ namespace MultiCameraDemo
         }
 
         /// <summary>
-        /// Handles the Click event of StopToolStripMenuItem object.
+        /// Handles the Click event of stopToolStripMenuItem object.
         /// </summary>
         private void stopToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -352,7 +352,7 @@ namespace MultiCameraDemo
         #region WebcamViewer
 
         /// <summary>
-        /// Handles the Click event of SlaveWebcamViewer object.
+        /// Handles the Click event of slaveWebcamViewer object.
         /// </summary>
         private void slaveWebcamViewer_Click(object sender, EventArgs e)
         {
@@ -373,7 +373,7 @@ namespace MultiCameraDemo
         }
 
         /// <summary>
-        /// Handles the DoubleClick event of WebcamViewer object.
+        /// Handles the DoubleClick event of webcamViewer object.
         /// </summary>
         private void webcamViewer_DoubleClick(object sender, EventArgs e)
         {

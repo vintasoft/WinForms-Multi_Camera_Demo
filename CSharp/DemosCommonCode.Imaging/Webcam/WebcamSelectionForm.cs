@@ -126,7 +126,7 @@ namespace DemosCommonCode.Imaging
         #region PRIVATE
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of DevicesComboBox object.
+        /// Handles the SelectedIndexChanged event of devicesComboBox object.
         /// </summary>
         private void devicesComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {

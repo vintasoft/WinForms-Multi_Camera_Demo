@@ -108,7 +108,7 @@ namespace DemosCommonCode
         #region UI
 
         /// <summary>
-        /// Handles the Click event of OkButton object.
+        /// Handles the Click event of okButton object.
         /// </summary>
         private void okButton_Click(object sender, EventArgs e)
         {
@@ -117,7 +117,7 @@ namespace DemosCommonCode
         }
 
         /// <summary>
-        /// Handles the LinkClicked event of LinkLabel object.
+        /// Handles the LinkClicked event of linkLabel object.
         /// </summary>
         private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -126,7 +126,7 @@ namespace DemosCommonCode
         }
 
         /// <summary>
-        /// Handles the Click event of VintasoftLogoPictureBox object.
+        /// Handles the Click event of vintasoftLogoPictureBox object.
         /// </summary>
         private void vintasoftLogoPictureBox_Click(object sender, EventArgs e)
         {

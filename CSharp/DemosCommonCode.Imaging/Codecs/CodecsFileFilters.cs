@@ -121,6 +121,16 @@ namespace DemosCommonCode.Imaging.Codecs
 #endif
 
         /// <summary>
+        /// The WSI file extensions.
+        /// </summary>
+        const string WSI_FILE_EXTENSIONS = "*.ndpi;*.vms";
+        /// <summary>
+        /// The file filter for DICOM files.
+        /// </summary>
+        const string WSI_FILE_DIALOG_FILTER = "WSI (Whole-Slide image) files|" + WSI_FILE_EXTENSIONS;
+
+
+        /// <summary>
         /// The DICOM file extensions.
         /// </summary>
         const string DICOM_FILE_EXTENSIONS = "*.dcm;*.dic;*.acr";
@@ -529,6 +539,14 @@ namespace DemosCommonCode.Imaging.Codecs
             {
                 filter1 += "|" + DICOM_FILE_DIALOG_FILTER;
                 filter2 += DICOM_FILE_EXTENSIONS + ";";
+                _imageDecoderFilterDefaultIndex++;
+            }
+
+            // if WSI decoders (NDPI) is available
+            if (AvailableDecoders.IsDecoderAvailable("Ndpi"))
+            {
+                filter1 += "|" + WSI_FILE_DIALOG_FILTER;
+                filter2 += WSI_FILE_EXTENSIONS + ";";
                 _imageDecoderFilterDefaultIndex++;
             }
 
