@@ -103,7 +103,7 @@ namespace DemosCommonCode.Imaging.Codecs
         /// <summary>
         /// The RAW file extensions.
         /// </summary>
-        const string RAW_FILE_EXTENSIONS = "*.cr2;*.crw;*.nef;*.nrw;*.dng";
+        const string RAW_FILE_EXTENSIONS = "*.cr2;*.crw;*.nef;*.nrw;*.dng;*.arw";
         /// <summary>
         /// The file filter for RAW files.
         /// </summary>
