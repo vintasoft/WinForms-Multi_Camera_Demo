@@ -393,18 +393,11 @@ namespace MultiCameraDemo
         /// </summary>
         private void RotateViewClockwise()
         {
-            int angle = masterWebcamViewer.ImageRotationAngle;
-
-            if (angle != 270)
-                angle += 90; 
-            else
-                angle = 0;
-
-            masterWebcamViewer.ImageRotationAngle = angle;
-            webcamViewer1.ImageRotationAngle = angle;
-            webcamViewer2.ImageRotationAngle = angle;
-            webcamViewer3.ImageRotationAngle = angle;
-            webcamViewer4.ImageRotationAngle = angle;
+            masterWebcamViewer.RotateViewClockwise();
+            webcamViewer1.RotateViewClockwise();
+            webcamViewer2.RotateViewClockwise();
+            webcamViewer3.RotateViewClockwise();
+            webcamViewer4.RotateViewClockwise();
         }
 
         /// <summary>
@@ -412,18 +405,11 @@ namespace MultiCameraDemo
         /// </summary>
         private void RotateViewCounterClockwise()
         {
-            int angle = masterWebcamViewer.ImageRotationAngle;
-
-            if (angle != 0)
-                angle -= 90;
-            else
-                angle = 270;
-
-            masterWebcamViewer.ImageRotationAngle = angle;
-            webcamViewer1.ImageRotationAngle = angle;
-            webcamViewer2.ImageRotationAngle = angle;
-            webcamViewer3.ImageRotationAngle = angle;
-            webcamViewer4.ImageRotationAngle = angle;
+            masterWebcamViewer.RotateViewCounterClockwise();
+            webcamViewer1.RotateViewCounterClockwise();
+            webcamViewer2.RotateViewCounterClockwise();
+            webcamViewer3.RotateViewCounterClockwise();
+            webcamViewer4.RotateViewCounterClockwise();
         }
 
         #endregion
