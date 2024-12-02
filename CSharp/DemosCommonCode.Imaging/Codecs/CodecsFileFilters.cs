@@ -203,6 +203,26 @@ namespace DemosCommonCode.Imaging.Codecs
         /// </summary>
         const string SVG_FILE_DIALOG_FILTER = "SVG Files|" + SVG_FILE_EXTENSIONS;
 
+        /// <summary>
+        /// The RTF file extensions.
+        /// </summary>
+        const string RTF_FILE_EXTENSIONS = "*.rtf";
+
+        /// <summary>
+        /// The file filter for RTF files.
+        /// </summary>
+        const string RTF_FILE_DIALOG_FILTER = "RTF Files|" + RTF_FILE_EXTENSIONS;
+
+        /// <summary>
+        /// The HTML file extensions.
+        /// </summary>
+        const string HTML_FILE_EXTENSIONS = "*.html;*.htm";
+
+        /// <summary>
+        /// The file filter for HTML files.
+        /// </summary>
+        const string HTML_FILE_DIALOG_FILTER = "HTML Files|" + HTML_FILE_EXTENSIONS;
+
         #endregion
 
 
@@ -485,6 +505,14 @@ namespace DemosCommonCode.Imaging.Codecs
 
                 filter1 += "|" + DOC_FILE_DIALOG_FILTER;
                 filter2 += DOC_FILE_EXTENSIONS + ";";
+                _imageDecoderFilterDefaultIndex++;
+
+                filter1 += "|" + RTF_FILE_DIALOG_FILTER;
+                filter2 += RTF_FILE_EXTENSIONS + ";";
+                _imageDecoderFilterDefaultIndex++;
+
+                filter1 += "|" + HTML_FILE_DIALOG_FILTER;
+                filter2 += HTML_FILE_EXTENSIONS + ";";
                 _imageDecoderFilterDefaultIndex++;
             }
 

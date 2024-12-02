@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Threading;
 
 using Vintasoft.Imaging;
@@ -46,6 +47,7 @@ namespace MultiCameraDemo
         /// <summary>
         /// Image capture device.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public ImageCaptureDevice CaptureDevice
         {
             get
@@ -82,6 +84,7 @@ namespace MultiCameraDemo
         /// <summary>
         /// Image capture timeout.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public int CaptureTimeout
         {
             get

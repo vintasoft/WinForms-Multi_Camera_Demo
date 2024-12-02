@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 using Vintasoft.Imaging.Media;
@@ -39,6 +40,7 @@ namespace DemosCommonCode.Imaging
         /// <summary>
         /// Gets or sets the selected webcam.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public ImageCaptureDevice SelectedWebcam
         {
             get
@@ -71,6 +73,7 @@ namespace DemosCommonCode.Imaging
         /// <value>
         /// <b>True</b> if image capture format can be changed; otherwise, <b>false</b>.
         /// </value>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool CanSelectFormat
         {
             get
