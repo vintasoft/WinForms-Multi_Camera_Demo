@@ -13,37 +13,42 @@ namespace DemosCommonCode.Imaging.Codecs
 
         #region Constants
 
-#if NETCOREAPP
+
         /// <summary>
         /// The file filter for image files.
         /// </summary>
-        const string IMAGE_FILES_DIALOG_FILTER = "BMP Files|*.bmp|GIF Files|*.gif|JPEG Files|*.jpg;*.jpeg;*.jfif|PBM/PGM/PPM files|*.pbm;*.pgm;*.ppm|PCX Files|*.pcx|PNG Files|*.png|TGA files|*.tga|TIFF Files|*.tif;*.tiff|WEBP files|*.webp";
+        static string IMAGE_FILES_DIALOG_FILTER =
+            "BMP Files|*.bmp|" +
+            "JPEG Files|*.jpg;*.jpeg;*.jfif|" +
+            "PBM/PGM/PPM files|*.pbm;*.pgm;*.ppm|" +
+            "PNG Files|*.png|" +
+            "PSD Files|*.psd|" +
+            "SVG Files|*.svg|" +
+            "TGA files|*.tga|" +
+            "TIFF Files|*.tif;*.tiff|" +
+            "GIF Files|*.gif|" +
+            "PCX Files|*.pcx";
 
         /// <summary>
         /// The file filter for all image files.
         /// </summary>
-        const string ALL_IMAGE_FILES_DIALOG_FILTER = "All Image Files|*.bmp;*.gif;*.jpg;*.jpeg;*.jfif;*.pbm;*.pgm;*.ppm;*.pcx;*.png;*.tga;*.tif;*.tiff;*.webp";
-#else
-        /// <summary>
-        /// The file filter for image files.
-        /// </summary>
-        const string IMAGE_FILES_DIALOG_FILTER = "BMP Files|*.bmp|GIF Files|*.gif|JPEG Files|*.jpg;*.jpeg;*.jfif|PBM/PGM/PPM files|*.pbm;*.pgm;*.ppm|PCX Files|*.pcx|PNG Files|*.png|TGA files|*.tga|TIFF Files|*.tif;*.tiff";
-
-        /// <summary>
-        /// The file filter for all image files.
-        /// </summary>
-        const string ALL_IMAGE_FILES_DIALOG_FILTER = "All Image Files|*.bmp;*.gif;*.jpg;*.jpeg;*.jfif;*.pbm;*.pgm;*.ppm;*.pcx;*.png;*.tga;*.tif;*.tiff;";
-#endif
+        const string ALL_IMAGE_FILES_DIALOG_FILTER = "All Image Files|*.bmp;*.gif;*.jpg;*.jpeg;*.jfif;*.pbm;*.pgm;*.ppm;*.pcx;*.png;*.psd;*.svg;*.tga;*.tif;*.tiff;";
 
         /// <summary>
         /// The other image files extensions.
         /// </summary>
-        const string OTHER_IMAGE_FILES_EXTENSIONS = "*.cur;*.emf;*.ico;*.jls;*.wmf;";
+        const string OTHER_IMAGE_FILES_EXTENSIONS = "*.psd;*.cur;*.emf;*.ico;*.jls;*.wmf;";
 
         /// <summary>
         /// The file filter for other image files.
         /// </summary>
-        const string OTHER_IMAGE_FILES_DIALOG_FILTER = "Cursor Files|*.cur|EMF Files|*.emf|Icon Files|*.ico|JPEG-LS Files|*.jls|WMF Files|*.wmf";
+        static string OTHER_IMAGE_FILES_DIALOG_FILTER = 
+            "PSD Files|*.psd|" +
+            "Cursor Files|*.cur|" +
+            "EMF Files|*.emf|" +
+            "Icon Files|*.ico|" +
+            "JPEG-LS Files|*.jls|" +
+            "WMF Files|*.wmf";
 
         /// <summary>
         /// The file filter for TIFF files.
@@ -109,7 +114,6 @@ namespace DemosCommonCode.Imaging.Codecs
         /// </summary>
         const string RAW_FILE_DIALOG_FILTER = "RAW Image Files|" + RAW_FILE_EXTENSIONS;
 
-#if NETCOREAPP
         /// <summary>
         /// The WEBP file extensions.
         /// </summary>
@@ -118,7 +122,15 @@ namespace DemosCommonCode.Imaging.Codecs
         /// The file filter for WEBP files.
         /// </summary>
         const string WEBP_FILE_DIALOG_FILTER = "WEBP Image Files|" + WEBP_FILE_EXTENSIONS;
-#endif
+
+        /// <summary>
+        /// The XPS file extensions.
+        /// </summary>
+        const string XPS_FILE_EXTENSIONS = "*.xps";
+        /// <summary>
+        /// The file filter for XPS files.
+        /// </summary>
+        const string XPS_FILE_DIALOG_FILTER = "XPS Files|" + XPS_FILE_EXTENSIONS;
 
         /// <summary>
         /// The WSI file extensions.
@@ -222,6 +234,26 @@ namespace DemosCommonCode.Imaging.Codecs
         /// The file filter for HTML files.
         /// </summary>
         const string HTML_FILE_DIALOG_FILTER = "HTML Files|" + HTML_FILE_EXTENSIONS;
+
+        /// <summary>
+        /// The ODT file extensions.
+        /// </summary>
+        const string ODT_FILE_EXTENSIONS = "*.odt";
+
+        /// <summary>
+        /// The file filter for ODT files.
+        /// </summary>
+        const string ODT_FILE_DIALOG_FILTER = "ODT Files|" + ODT_FILE_EXTENSIONS;
+
+        /// <summary>
+        /// The ODT file extensions.
+        /// </summary>
+        const string ODS_FILE_EXTENSIONS = "*.ods";
+
+        /// <summary>
+        /// The file filter for ODT files.
+        /// </summary>
+        const string ODS_FILE_DIALOG_FILTER = "ODS Files|" + ODS_FILE_EXTENSIONS;
 
         #endregion
 
@@ -478,7 +510,7 @@ namespace DemosCommonCode.Imaging.Codecs
         {
             string filter1 = string.Format("{0}|{1}", IMAGE_FILES_DIALOG_FILTER, OTHER_IMAGE_FILES_DIALOG_FILTER);
             string filter2 = ALL_IMAGE_FILES_DIALOG_FILTER + OTHER_IMAGE_FILES_EXTENSIONS;
-            _imageDecoderFilterDefaultIndex = 15;
+            _imageDecoderFilterDefaultIndex = 17;
 
             // if JBIG2 decoder is available
             if (AvailableDecoders.IsDecoderAvailable("Jbig2"))
@@ -514,6 +546,10 @@ namespace DemosCommonCode.Imaging.Codecs
                 filter1 += "|" + HTML_FILE_DIALOG_FILTER;
                 filter2 += HTML_FILE_EXTENSIONS + ";";
                 _imageDecoderFilterDefaultIndex++;
+
+                filter1 += "|" + ODT_FILE_DIALOG_FILTER;
+                filter2 += ODT_FILE_EXTENSIONS + ";";
+                _imageDecoderFilterDefaultIndex++;
             }
 
             // if XLSX decoder is available
@@ -534,6 +570,10 @@ namespace DemosCommonCode.Imaging.Codecs
                 filter1 += "|" + CSV_FILE_DIALOG_FILTER;
                 filter2 += CSV_FILE_EXTENSIONS + ";";
                 _imageDecoderFilterDefaultIndex++;
+
+                filter1 += "|" + ODS_FILE_DIALOG_FILTER;
+                filter2 += ODS_FILE_EXTENSIONS + ";";
+                _imageDecoderFilterDefaultIndex++;
             }
 
             // if JPEG2000 decoder is available
@@ -552,7 +592,6 @@ namespace DemosCommonCode.Imaging.Codecs
                 _imageDecoderFilterDefaultIndex++;
             }
 
-#if NETCOREAPP
             // if WEBP decoder is available
             if (AvailableDecoders.IsDecoderAvailable("Webp"))
             {
@@ -560,7 +599,14 @@ namespace DemosCommonCode.Imaging.Codecs
                 filter2 += WEBP_FILE_EXTENSIONS + ";";
                 _imageDecoderFilterDefaultIndex++;
             }
-#endif
+
+            // if XPS decoder is available
+            if (AvailableDecoders.IsDecoderAvailable("Xps"))
+            {
+                filter1 += "|" + XPS_FILE_DIALOG_FILTER;
+                filter2 += XPS_FILE_EXTENSIONS + ";";
+                _imageDecoderFilterDefaultIndex++;
+            }
 
             // if DICOM decoder is available
             if (AvailableDecoders.IsDecoderAvailable("Dicom"))
@@ -592,7 +638,7 @@ namespace DemosCommonCode.Imaging.Codecs
         static void InitImageEncoderFilter()
         {
             string filter1 = IMAGE_FILES_DIALOG_FILTER;
-            _imageEncoderFilterDefaultIndex = 3;
+            _imageEncoderFilterDefaultIndex = 4;
 
             filter1 += "|" + SVG_FILE_DIALOG_FILTER;
 
@@ -645,6 +691,8 @@ namespace DemosCommonCode.Imaging.Codecs
                 filter1 += "|" + PDF_FILE_DIALOG_FILTER;
 
             filter1 += "|" + JPEG_FILE_DIALOG_FILTER;
+
+            filter1 += "|" + JPEG2000_FILE_DIALOG_FILTER;
 
             filter1 += "|" + PNG_FILE_DIALOG_FILTER;
 

@@ -154,20 +154,12 @@ namespace MultiCameraDemo
             if (_imageCaptureSource.State == ImageCaptureState.Stopped)
                 return;
 
-            // save reference to the previously captured image
-            VintasoftImage oldImage = this.Image;
             // show captured image in the preview viewer
-            this.Image = e.GetCapturedImage();
-            // if previously captured image is exist
-            if (oldImage != null)
-            {
-                lock (oldImage)
-                {
-                    // dispose previously captured image
-                    oldImage.Dispose();
-                }
-            }
-
+            if (Image != null)
+                Image.SetImage(e.GetCapturedImage());
+            else
+                Image = e.GetCapturedImage();
+            
             // if capture source is started
             if (_imageCaptureSource.State == ImageCaptureState.Started)
             {
