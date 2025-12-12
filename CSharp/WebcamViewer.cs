@@ -21,6 +21,11 @@ namespace MultiCameraDemo
         /// </summary>
         ImageCaptureSource _imageCaptureSource;
 
+        /// <summary>
+        /// Indicates when image was painted.
+        /// </summary>
+        bool _imagePainted;
+
         #endregion
 
 
@@ -110,6 +115,7 @@ namespace MultiCameraDemo
         {
             if (_imageCaptureSource != null && _imageCaptureSource.State != ImageCaptureState.Started)
             {
+                _imagePainted = true;
                 _imageCaptureSource.Start();
                 _imageCaptureSource.CaptureAsync();
             }
@@ -131,9 +137,9 @@ namespace MultiCameraDemo
         /// </summary>
         public VintasoftImage GetCapturedImage()
         {
-            while (this.Image != null)
+            while (Image != null)
             {
-                VintasoftImage image = this.Image;
+                VintasoftImage image = Image;
                 if (image == null)
                     return null;
 
@@ -147,6 +153,18 @@ namespace MultiCameraDemo
         }
 
         /// <summary>
+        /// Raises the <see cref="E:Vintasoft.Imaging.UI.ImageViewer.ImagePainted" /> event.
+        /// </summary>
+        /// <param name="sender">Painted image.</param>
+        /// <param name="e">An <see cref="T:Vintasoft.Imaging.ImageLoadedEventArgs" /> that contains
+        /// the event data.</param>
+        protected override void OnImagePainted(object sender, ImageLoadedEventArgs e)
+        {
+            _imagePainted = true;
+            base.OnImagePainted(sender, e);
+        }
+
+        /// <summary>
         /// Image is captured.
         /// </summary>
         private void CaptureSource_CaptureCompleted(object sender, ImageCaptureCompletedEventArgs e)
@@ -154,11 +172,16 @@ namespace MultiCameraDemo
             if (_imageCaptureSource.State == ImageCaptureState.Stopped)
                 return;
 
-            // show captured image in the preview viewer
-            if (Image != null)
-                Image.SetImage(e.GetCapturedImage());
-            else
-                Image = e.GetCapturedImage();
+            // if previous image was painted
+            if (Image == null || _imagePainted)
+            {
+                _imagePainted = false;
+                // show captured image in the preview viewer
+                if (Image != null)
+                    Image.SetImage(e.GetCapturedImage());
+                else
+                    Image = e.GetCapturedImage();
+            }
             
             // if capture source is started
             if (_imageCaptureSource.State == ImageCaptureState.Started)

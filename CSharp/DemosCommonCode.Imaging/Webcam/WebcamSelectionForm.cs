@@ -140,23 +140,22 @@ namespace DemosCommonCode.Imaging
             if (SelectedWebcam != null)
             {
                 // list with image formats
-                List<uint> imageCaptureFormatSizes = new List<uint>();
+                HashSet<string> imageCaptureFormatKeys = new HashSet<string>();
                 // for each image format in webcam supported formats
                 for (int i = 0; i < SelectedWebcam.SupportedFormats.Count; i++)
                 {
+                    ImageCaptureFormat captureFormat = SelectedWebcam.SupportedFormats[i];
+
                     // if format has bit depth less or equal than 12 bit
-                    if (SelectedWebcam.SupportedFormats[i].BitsPerPixel <= 12)
+                    if (captureFormat.BitsPerPixel <= 12)
                         // ignore formats with bit depth less or equal than 12 bit because they may cause issues on Windows 8
                         continue;
 
-                    // get image capture format size
-                    uint imageCaptureFormatSize = (uint)(SelectedWebcam.SupportedFormats[i].Width | (SelectedWebcam.SupportedFormats[i].Height << 16));
-                    // if the format has not been added
-                    if (!imageCaptureFormatSizes.Contains(imageCaptureFormatSize))
+                    string imageCaptureFormatSKey = captureFormat.Width + "X" + captureFormat.Height + " " + captureFormat.FramesPerSecond;
+                    if (!imageCaptureFormatKeys.Contains(imageCaptureFormatSKey))
                     {
-                        // add image format
-                        imageCaptureFormatSizes.Add(imageCaptureFormatSize);
-                        videoFormatComboBox.Items.Add(SelectedWebcam.SupportedFormats[i]);
+                        imageCaptureFormatKeys.Add(imageCaptureFormatSKey);
+                        videoFormatComboBox.Items.Add(captureFormat);
                     }
                 }
 
