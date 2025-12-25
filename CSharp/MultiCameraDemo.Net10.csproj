@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net10.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
@@ -12,7 +12,7 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>    
     <EnableDefaultItems>false</EnableDefaultItems>
-    <Version>14.1.21.1</Version>
+    <Version>15.0.0.1</Version>
     <AssemblyName>MultiCameraDemo</AssemblyName>
     <RootNamespace>MultiCameraDemo</RootNamespace>
     <StartupObject>MultiCameraDemo.Program</StartupObject>
@@ -30,10 +30,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Vintasoft.Imaging" Version="14.1.21.1" />
-    <PackageReference Include="Vintasoft.Imaging.Gdi" Version="14.1.21.1" />
-    <PackageReference Include="Vintasoft.Imaging.Media" Version="14.1.21.1" />
-    <PackageReference Include="Vintasoft.Imaging.UI" Version="14.1.21.1" />
+    <PackageReference Include="Vintasoft.Imaging" Version="15.0.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Gdi" Version="15.0.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Media" Version="15.0.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.UI" Version="15.0.0.1" />
     <PackageReference Include="Vintasoft.Shared" Version="4.6.1.1" />
   </ItemGroup>
   <ItemGroup>
