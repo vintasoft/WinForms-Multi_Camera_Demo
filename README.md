@@ -1,4 +1,4 @@
-# VintaSoft WinForms Multi Camera Demo
+﻿# VintaSoft WinForms Multi Camera Demo
 
 This C# project uses <a href="https://www.vintasoft.com/vsimaging-dotnet-index.html">VintaSoft Imaging .NET SDK</a> and demonstrates how to work with multiple DirectX cameras in WinForms:
 * Capture images from multiple DirectX cameras
@@ -19,9 +19,9 @@ This C# project uses <a href="https://www.vintasoft.com/vsimaging-dotnet-index.h
    Vintasoft.Imaging.ImagingGlobalSettings.Register("REG_USER", "REG_EMAIL", "EXPIRATION_DATE", "REG_CODE");
    ```
 
-3. Build the project ("MultiCameraDemo.Net8.csproj" file) in Visual Studio or using .NET CLI:
+3. Build the project ("MultiCameraDemo.Net10.csproj" file) in Visual Studio or using .NET CLI:
    ```
-   dotnet build MultiCameraDemo.Net8.csproj
+   dotnet build MultiCameraDemo.Net10.csproj
    ```
 
 4. Run compiled application and try to work with multiple DirectX cameras.
