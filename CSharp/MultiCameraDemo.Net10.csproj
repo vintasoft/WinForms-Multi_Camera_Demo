@@ -12,7 +12,7 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>    
     <EnableDefaultItems>false</EnableDefaultItems>
-    <Version>15.0.1.1</Version>
+    <Version>15.0.2.1</Version>
     <AssemblyName>MultiCameraDemo</AssemblyName>
     <RootNamespace>MultiCameraDemo</RootNamespace>
     <StartupObject>MultiCameraDemo.Program</StartupObject>
@@ -30,10 +30,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Vintasoft.Imaging" Version="15.0.1.1" />
-    <PackageReference Include="Vintasoft.Imaging.Gdi" Version="15.0.1.1" />
-    <PackageReference Include="Vintasoft.Imaging.Media" Version="15.0.1.1" />
-    <PackageReference Include="Vintasoft.Imaging.UI" Version="15.0.1.1" />
+    <PackageReference Include="Vintasoft.Imaging" Version="15.0.2.1" />
+    <PackageReference Include="Vintasoft.Imaging.Gdi" Version="15.0.2.1" />
+    <PackageReference Include="Vintasoft.Imaging.Media" Version="15.0.2.1" />
+    <PackageReference Include="Vintasoft.Imaging.UI" Version="15.0.2.1" />
     <PackageReference Include="Vintasoft.Shared" Version="4.6.1.1" />
   </ItemGroup>
   <ItemGroup>
