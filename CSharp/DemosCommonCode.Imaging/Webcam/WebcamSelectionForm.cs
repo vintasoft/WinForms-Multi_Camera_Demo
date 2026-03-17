@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 using Vintasoft.Imaging.Media;
 
-namespace DemosCommonCode.Imaging
+namespace CommonCode.Imaging
 {
     /// <summary>
     /// A form that allows to select the webcam from webcam list.

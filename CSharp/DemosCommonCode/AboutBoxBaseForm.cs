@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace DemosCommonCode
+namespace CommonCode
 {
     /// <summary>
     /// A base form for the application "About" dialog.

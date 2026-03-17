@@ -1,4 +1,4 @@
-namespace DemosCommonCode
+﻿namespace CommonCode
 {
     public partial class AboutBoxBaseForm
     {

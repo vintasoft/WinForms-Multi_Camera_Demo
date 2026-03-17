@@ -1,9 +1,9 @@
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 using Vintasoft.Imaging.Codecs.Decoders;
 using Vintasoft.Imaging.Codecs.Encoders;
 
-namespace DemosCommonCode.Imaging.Codecs
+namespace CommonCode.Imaging.Codecs
 {
     /// <summary>
     /// Contains filters for Open/Save dialogs.

@@ -1,4 +1,4 @@
-using DemosCommonCode;
+﻿using CommonCode;
 
 namespace MultiCameraDemo
 {

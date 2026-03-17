@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -13,7 +13,7 @@ using Vintasoft.Imaging.UI.VisualTools;
 using Vintasoft.Imaging.UIActions;
 
 
-namespace DemosCommonCode
+namespace CommonCode
 {
     /// <summary>
     /// Contains collection of helper-algorithms for demo applications.
