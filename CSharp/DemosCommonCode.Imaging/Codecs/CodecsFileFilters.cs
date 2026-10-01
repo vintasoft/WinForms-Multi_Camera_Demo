@@ -151,6 +151,15 @@ namespace CommonCode.Imaging.Codecs
         const string CAD_FILE_DIALOG_FILTER = "CAD Image Files|" + CAD_FILE_EXTENSIONS;
 
         /// <summary>
+        /// The Email file extensions.
+        /// </summary>
+        const string EMAIL_FILE_EXTENSIONS = "*.msg;*.eml";
+        /// <summary>
+        /// The file filter for Email files.
+        /// </summary>
+        const string EMAIL_FILE_DIALOG_FILTER = "Email Files|" + EMAIL_FILE_EXTENSIONS;
+
+        /// <summary>
         /// The DICOM file extensions.
         /// </summary>
         const string DICOM_FILE_EXTENSIONS = "*.dcm;*.dic;*.acr";
@@ -545,6 +554,14 @@ namespace CommonCode.Imaging.Codecs
                 _imageDecoderFilterDefaultIndex++;
             }
 
+            // if HTML decoder is available
+            if (AvailableDecoders.IsDecoderAvailable("Html"))
+            {
+                filter1 += "|" + HTML_FILE_DIALOG_FILTER;
+                filter2 += HTML_FILE_EXTENSIONS + ";";
+                _imageDecoderFilterDefaultIndex++;
+            }
+
             // if DOCX decoder is available
             if (AvailableDecoders.IsDecoderAvailable("Docx"))
             {
@@ -558,10 +575,6 @@ namespace CommonCode.Imaging.Codecs
 
                 filter1 += "|" + RTF_FILE_DIALOG_FILTER;
                 filter2 += RTF_FILE_EXTENSIONS + ";";
-                _imageDecoderFilterDefaultIndex++;
-
-                filter1 += "|" + HTML_FILE_DIALOG_FILTER;
-                filter2 += HTML_FILE_EXTENSIONS + ";";
                 _imageDecoderFilterDefaultIndex++;
 
                 filter1 += "|" + ODT_FILE_DIALOG_FILTER;
@@ -622,6 +635,14 @@ namespace CommonCode.Imaging.Codecs
             {
                 filter1 += "|" + CAD_FILE_DIALOG_FILTER;
                 filter2 += CAD_FILE_EXTENSIONS + ";";
+                _imageDecoderFilterDefaultIndex++;
+            }
+
+            // if Email decoder is available
+            if (AvailableDecoders.IsDecoderAvailable("Email"))
+            {
+                filter1 += "|" + EMAIL_FILE_DIALOG_FILTER;
+                filter2 += EMAIL_FILE_EXTENSIONS + ";";
                 _imageDecoderFilterDefaultIndex++;
             }
 
