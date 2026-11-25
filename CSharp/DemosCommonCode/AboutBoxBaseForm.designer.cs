@@ -189,7 +189,7 @@
             this.forumsLinkLabel.Size = new System.Drawing.Size(138, 13);
             this.forumsLinkLabel.TabIndex = 32;
             this.forumsLinkLabel.TabStop = true;
-            this.forumsLinkLabel.Text = "www.vintasoft.com/forums/";
+            this.forumsLinkLabel.Text = "forums.vintasoft.com";
             this.forumsLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_LinkClicked);
             // 
             // nameLabel
